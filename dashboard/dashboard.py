@@ -7,7 +7,7 @@ from datetime import datetime
 
 @st.cache_data
 def load_data():
-    gabungan_df = pd.read_csv('\main_data.csv')  
+    gabungan_df = pd.read_csv('main_data.csv')  
     date_columns = ['order_purchase_timestamp', 'order_delivered_customer_date', 'order_estimated_delivery_date']
     for col in date_columns:
         gabungan_df[col] = pd.to_datetime(gabungan_df[col])
